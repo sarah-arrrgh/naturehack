@@ -50,21 +50,21 @@ function init(){
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-overridable: false,
-    type: 'circle',
-    color: '#ccb',
-    alpha: 1,
-    dim: 120,
-    autoHeight: true,
-    autoWidth: true,
-    lineWidth: 2,
-    align: "center",
+          overridable: true,
+          type: 'circle',
+          color: '#ccb',
+          alpha: 1,
+          dim: 120,
+          autoHeight: true,
+          autoWidth: true,
+          lineWidth: 2,
+          align: "center",
         },
 
         Edge: {
             type: 'bezier',
             dim: 125,
-            lineWidth: 5,
+            lineWidth: 3,
             overridable: true
         },
 
@@ -91,11 +91,11 @@ overridable: false,
             }
             //set label styles
             var style = label.style
-            style.width = 60 + 'px'
-            style.height = 17 + 'px'
+            style.width = 90 + 'px'
+            style.height = 50 + 'px'
             style.cursor = 'pointer'
             style.color = '#333'
-            style.fontSize = '0.8em'
+            style.fontSize = '1em'
             style.textAlign = 'center'
             style.paddingTop = '3px'
         },
@@ -133,7 +133,7 @@ overridable: false,
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
                 adj.data.$color = "#eed"
-                adj.data.$lineWidth = 3
+                adj.data.$lineWidth = 10
             }
             else {
                 delete adj.data.$color

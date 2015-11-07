@@ -29,7 +29,7 @@ a {
 
 #container {
     width: 100%;
-    height: 100%;
+    height: 100pz;
     margin:0 auto;
     position:relative;
 }
@@ -37,7 +37,7 @@ a {
 #left-container,
 #right-container,
 #center-container {
-    height:800px;
+    height:1200px;
     position:absolute;
     top:0;
 }
@@ -101,6 +101,11 @@ a {
     margin:auto;
     overflow:hidden;
 }
+
+./*node {
+    text-align: center;
+    margin-top: 100px;
+}*/
 
 /*TOOLTIPS*/
 .tip {
