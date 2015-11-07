@@ -4,7 +4,7 @@ var dataInput = {
     data: {},
     children: [{
         id: "01",
-        name: "01",
+        name: "Bitey insects",
         data: {},
         children: [{
             id: "011",
@@ -74,7 +74,7 @@ var dataInput = {
         }]
     }, {
         id: "02",
-        name: "02",
+        name: "Stingy insects",
         data: {},
         children: [{
             id: "021",
@@ -149,7 +149,7 @@ var dataInput = {
         }]
     }, {
         id: "03",
-        name: "03",
+        name: "Cuddly insects",
         data: {},
         children: [{
             id: "031",
@@ -224,7 +224,7 @@ var dataInput = {
         }]
     }, {
         id: "04",
-        name: "04",
+        name: "Farty insects",
         data: {},
         children: [{
             id: "041",
