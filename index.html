@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Ruru-Iti Organisms Tree</title>
+
+  <link type="text/css" href="./treeSpecies/css/base.css" rel="stylesheet" />
+  <link type="text/css" href="./treeSpecies/css/tree.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic' rel='stylesheet' type='text/css'>
+  <script src="./treeSpecies/js/data.js"></script>
+  <script language="javascript" type="text/javascript" src="./src/jit.js"></script>
+  <script language="javascript" type="text/javascript" src="./treeSpecies/js/tree.js"></script>
+</head>
+
+<body onload="init()">
+  <h1 class = 'header'>Taxon-Taxoff</h1>
+  <div id="container">
+
+  <div id="center-container">
+    <div id="infovis"></div>
+  </div>
+
+  <!--magic table-->
+    <table hidden>
+      <tr>
+        <td>
+          <label for="s-normal">Normal </label>
+        </td>
+        <td>
+          <input type="radio" id="s-normal" name="selection" checked="checked" value="normal" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="log" hidden></div>
+  </div>
+</body>
+
+</html>
