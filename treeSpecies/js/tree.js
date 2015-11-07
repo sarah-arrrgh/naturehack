@@ -41,7 +41,7 @@ function init(){
         Node: {
           overridable: true,
           type: 'circle',
-          color: '#3a3',
+          color: '#E9980A',
           alpha: 1,
           dim: 110,
           autoHeight: false,
@@ -89,7 +89,7 @@ function init(){
 
         onBeforePlotNode: function(node){
             if (node.selected) {
-                node.data.$color = "#ff7"
+                node.data.$color = "#E9980A"
                 node.data.$dim = 160
             }
             else {
@@ -98,9 +98,9 @@ function init(){
                 if(!node.anySubnode("exist")) {
                     var count = 0
                     node.eachSubnode(function(n) { count++ })
-                    node.data.$color = ['#151', '#161', '#292', '#3a3', '#4d4', '#5f4'][count]
+                    node.data.$color = ['#E9980A', '#E9980A', '#E9980A', '#E9980A', '#E9980A', '#E9980A'][count]
                     if(count > 5){
-                        node.data.$color = '#9f7'
+                        node.data.$color = '#edac3a'
                     }
                 }
             }
