@@ -1,6 +1,6 @@
 var dataInput = {
     id: "0",
-    name: "Class: Insecta",
+    name: "Insecta",
     data: {},
     children: [{
         // Order
@@ -8,24 +8,24 @@ var dataInput = {
                 // Genus
                     // Species
         id: "01",
-        name: "Order: Archaeognatha",
+        name: "Archaeognatha",
         data: {},
         children: [{
             id: "011",
-            name: "Family: Meinertellidae",
+            name: "Meinertellidae",
             data: {},
             children: [{
                 id: "0111",
-                name: "Genus: Nesomachilis",
+                name: "Nesomachilis",
                 data: {},
                 children: [{
                     id: "01111",
-                    name: "Species:  Nesomachilis maorica Tillyard, 1924",
+                    name: "Nesomachilis maorica Tillyard, 1924",
                     data: {},
                     children: []
                     }, {
                     id: "01112",
-                    name: "Species:  Nesomachilis novaezelandiae Mendes, Bach de Rocha & Gaju-Ricart, 1994",
+                    name: "Nesomachilis novaezelandiae Mendes, Bach de Rocha & Gaju-Ricart, 1994",
                     data: {},
                     children: []
                     }]
@@ -371,19 +371,19 @@ var dataInput = {
             data: {},
             children: [{
                 id: "0221",
-                name: "0221",
+                name: "Ateluridae",
                 data: {},
                 children: []
             }, {
                 id: "0222",
-                name: "0222",
+                name: "Lepidotrichidae",
                 data: {},
-                children: [{
-                    id: "02221",
-                    name: "02221",
-                    data: {},
-                    children: []
-                }]
+                children: []
+            }, {
+                id: "0222",
+                name: "Lepismatidae",
+                data: {},
+                children: []
             }]
         }]
     }]
