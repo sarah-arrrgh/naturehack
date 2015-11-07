@@ -83,6 +83,7 @@ function init(){
             label.id = node.id
             label.innerHTML = node.name
             label.onclick = function(){
+              console.log(this)
               if(normal.checked) {
                 ruru.onClick(node.id)
               } else {
