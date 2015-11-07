@@ -89,7 +89,7 @@ function init(){
 
         onBeforePlotNode: function(node){
             if (node.selected) {
-                node.data.$color = "#E9980A"
+                node.data.$color = "#ddc029"
                 node.data.$dim = 160
             }
             else {
@@ -98,9 +98,9 @@ function init(){
                 if(!node.anySubnode("exist")) {
                     var count = 0
                     node.eachSubnode(function(n) { count++ })
-                    node.data.$color = ['#E9980A', '#E9980A', '#E9980A', '#E9980A', '#E9980A', '#E9980A'][count]
+                    node.data.$color = ['#edac3a', '#eeb44d', '#f0bc61', '#f2c475', '#f4cd88', '#f6d59c'][count]
                     if(count > 5){
-                        node.data.$color = '#edac3a'
+                        node.data.$color = '#f7ddb0'
                     }
                 }
             }
@@ -109,7 +109,7 @@ function init(){
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
                 adj.data.$color = "#eed"
-                adj.data.$lineWidth = 10
+                adj.data.$lineWidth = 8
             }
             else {
                 delete adj.data.$color
