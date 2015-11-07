@@ -1,7 +1,8 @@
-var request = require('request')
 var nzor = require('newzealandorganismsregisterlib')
-nzor.NamesController.getNamesGet({page: 1}, function(err,res){
+var names = nzor.NamesController
+
+names.getNamesGetSearch({query: "Aves"}, function(err,res){
 	if(!err){
-		console.log(res.names[0])
+		console.log("boo")
 	}
 })
