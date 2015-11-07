@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Ajaxing</title>
+</head>
+
+<body>
+	<script>
+		function ajaxFunction(){
+			var ajaxRequest
+
+			try{
+				ajaxRequest = new XMLHttpRequest()
+			}catch(e){
+				try{
+					ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP")
+				}catch(e){
+					try{
+						ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP")
+					}catch(e){
+						alert("Your browser is not compatible with this page")
+						return false
+					}
+				}
+			}
+		}
+
+		function getImage(){
+			ajaxFunction()
+
+			ajaxRequest.onreadystatechange = processRequest
+
+			if(!target) target = document.getElementById('imgSearch')
+			var url = 'search?id='+ escape(target.value)
+
+			ajaxRequest.open("GET", url, true)
+			ajaxRequest.send(null)
+		}
+	</script>
+	Search image: <input id='imgSearch' type='text' name='search'>
+</body>
+</html>

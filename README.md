@@ -12,3 +12,4 @@ Checking out Landcare APIs to see what info we can get, what format it's in, how
 ## Scraping / Wiki API
 Can we scrape more information/pictures from Wikipedia/the internet to add to our project, and do this on an as-needed basis.
 
+If anyone decides to use this project we promise to write a test suite for it before we ship to you (maybe)
