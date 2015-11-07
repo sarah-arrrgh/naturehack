@@ -5,7 +5,6 @@ console.log("window width: " + w)
 console.log("window height: " + h)
 
 $(document).ready(function(){
-  animateRandomMovement("#aves")
 
 // zindex = what thing is at the front
   var zindex = 0
@@ -16,7 +15,6 @@ $(document).ready(function(){
       animateRandomMovement(this)
     }
     else {
-      $('#sax').append('<embed id="embed_player" src="http://haptictheory.com/tones/epic-sax-guy.mp3" autostart="true" hidden="true"></embed>')
       animateToCentre(this)
       animateGrow(this)
     }
@@ -24,13 +22,23 @@ $(document).ready(function(){
   })
 })
 
-function animateRandomMovement(id){
-  var newq = makeNewPosition()
-  var oldq = $(id).offset()
-  var speed = calcSpeed([oldq.top, oldq.left], newq)
-  $(id).animate({ top: newq[0], left: newq[1] }, speed, function(){
-    animateRandomMovement(id)
-  })
+// function animateRandomMovement(id){
+//   var newq = makeNewPosition()
+//   var oldq = $(id).offset()
+//   var speed = calcSpeed([oldq.top, oldq.left], newq)
+//   $(id).animate({ top: newq[0], left: newq[1] }, speed, function(){
+//     animateRandomMovement(id)
+//   })
+// }
+
+function createChildren(currentLevel){
+  // API call to get children from that level
+  // append children below current level
+}
+
+function createNeighbours(currentLevel){
+  // API call to get neighbours of current level
+  // append neighbours to same level as current, but smaller
 }
 
 function makeNewPosition(){
@@ -51,7 +59,7 @@ function calcSpeed(prev, next) {
   return speed
 }
 
-function animateToCentre(e){
+function animateToTop(e){
   var div = e.currentTarget
   var centreX = (w / 2) - ($(".circle").width() / 2)
   var centreY = (h / 2) - ($(".circle").height() / 2)

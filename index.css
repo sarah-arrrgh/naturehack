@@ -9,7 +9,8 @@ height: 250px;
 background: #ef8913;
 margin: 50px;
 border-radius: 50%;
-margin: 0;
+margin-left: -125px;
+margin-top: -125px;
 }
 
 .circle p {
@@ -25,6 +26,6 @@ display:none;
 }
 
 #aves{
-  top: 5%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
 }
