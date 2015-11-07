@@ -11,6 +11,8 @@ html, body {
 
 .title{
     color: #E9980A;
+    font-size: 3.0em;
+    padding-top: 10px;
 }
 
 input, select {
