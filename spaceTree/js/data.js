@@ -1,26 +1,35 @@
 var dataInput = {
     id: "0",
-    name: "Insecta",
+    name: "Class: Insecta",
     data: {},
     children: [{
+        // Order
+            // Family
+                // Genus
+                    // Species
         id: "01",
-        name: "Bitey insects",
+        name: "Order: Archaeognatha",
         data: {},
         children: [{
             id: "011",
-            name: "011",
+            name: "Family: Meinertellidae",
             data: {},
             children: [{
                 id: "0111",
-                name: "0111",
+                name: "Genus: Nesomachilis",
                 data: {},
                 children: [{
                     id: "01111",
-                    name: "01111",
+                    name: "Species:  Nesomachilis maorica Tillyard, 1924",
                     data: {},
                     children: []
-                }]
-            }, {
+                    }, {
+                    id: "01112",
+                    name: "Species:  Nesomachilis novaezelandiae Mendes, Bach de Rocha & Gaju-Ricart, 1994",
+                    data: {},
+                    children: []
+                    }]
+                }, {
                 id: "0112",
                 name: "0112",
                 data: {},
@@ -74,7 +83,7 @@ var dataInput = {
         }]
     }, {
         id: "02",
-        name: "Stingy insects",
+        name: "Archaeognatha",
         data: {},
         children: [{
             id: "021",
@@ -149,7 +158,7 @@ var dataInput = {
         }]
     }, {
         id: "03",
-        name: "Cuddly insects",
+        name: "Dicondylia",
         data: {},
         children: [{
             id: "031",
@@ -224,7 +233,7 @@ var dataInput = {
         }]
     }, {
         id: "04",
-        name: "Farty insects",
+        name: "Dicondylia",
         data: {},
         children: [{
             id: "041",
