@@ -40,7 +40,7 @@ function init(){
         //set animation transition type
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
-        levelDistance: 50,
+        levelDistance: 150,
         //enable panning
         Navigation: {
           enable:true,
@@ -50,15 +50,21 @@ function init(){
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 30,
-            width: 60,
-            type: 'rectangle',
-            color: '#aaa',
-            overridable: true
+overridable: false,
+    type: 'circle',
+    color: '#ccb',
+    alpha: 1,
+    dim: 120,
+    autoHeight: true,
+    autoWidth: true,
+    lineWidth: 2,
+    align: "center",
         },
 
         Edge: {
             type: 'bezier',
+            dim: 125,
+            lineWidth: 5,
             overridable: true
         },
 
