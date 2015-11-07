@@ -1,6 +1,6 @@
 var dataInput = {
     id: "0",
-    name: "INSECTS AND SHIT MOTHERFUCKER",
+    name: "Insecta",
     data: {},
     children: [{
         id: "01",

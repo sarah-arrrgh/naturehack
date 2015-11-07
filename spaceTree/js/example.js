@@ -52,11 +52,11 @@ function init(){
         Node: {
           overridable: true,
           type: 'circle',
-          color: '#ccb',
+          color: '#3a3',
           alpha: 1,
-          dim: 120,
-          autoHeight: true,
-          autoWidth: true,
+          dim: 70,
+          autoHeight: false,
+          autoWidth: false,
           lineWidth: 2,
           align: "center",
         },
@@ -110,17 +110,19 @@ function init(){
             //root node and the selected node.
             if (node.selected) {
                 node.data.$color = "#ff7"
+                node.data.$dim = 120
             }
             else {
                 delete node.data.$color
                 //if the node belongs to the last plotted level
                 if(!node.anySubnode("exist")) {
+                    node.data.$dim = 70
                     //count children number
                     var count = 0
                     node.eachSubnode(function(n) { count++ })
                     //assign a node color based on
                     //how many children it has
-                    node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count]
+                    node.data.$color = ['#151', '#161', '#292', '#3a3', '#4d4', '#5f4'][count]
                 }
             }
         },
