@@ -21,12 +21,19 @@ var Log = {
     if (!this.elem)
       this.elem = document.getElementById('log')
     this.elem.innerHTML = text
-    this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px'
+    this.elem.style.left = (500 - this.elem.offsetWidth) + 'px'
   }
 }
 
 
 function init(){
+function getRandomColor(brightness){
+    //6 levels of brightness from 0 to 5, 0 being the darkest
+    var rgb = [Math.random() * 256, Math.random() * 256, Math.random() * 256];
+    var mix = [brightness*51, brightness*51, brightness*51]; //51 => 255/5
+    var mixedrgb = [rgb[0] + mix[0], rgb[1] + mix[1], rgb[2] + mix[2]].map(function(x){ return Math.round(x/2.0)})
+    return "rgb(" + mixedrgb.join(",") + ")";
+  }
     //init data
     var json = dataInput
     //end
@@ -40,7 +47,7 @@ function init(){
         //set animation transition type
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
-        levelDistance: 150,
+        levelDistance: 250,
         //enable panning
         Navigation: {
           enable:true,
@@ -52,9 +59,9 @@ function init(){
         Node: {
 overridable: false,
     type: 'circle',
-    color: '#ccb',
+    color: getRandomColor(2),
     alpha: 1,
-    dim: 120,
+    dim: 80,
     autoHeight: true,
     autoWidth: true,
     lineWidth: 2,
@@ -64,7 +71,7 @@ overridable: false,
         Edge: {
             type: 'bezier',
             dim: 125,
-            lineWidth: 5,
+            lineWidth: 10,
             overridable: true
         },
 
@@ -92,7 +99,7 @@ overridable: false,
             //set label styles
             var style = label.style
             style.width = 60 + 'px'
-            style.height = 17 + 'px'
+            style.height = 47 + 'px'
             style.cursor = 'pointer'
             style.color = '#333'
             style.fontSize = '0.8em'
@@ -109,7 +116,7 @@ overridable: false,
             //add some color to the nodes in the path between the
             //root node and the selected node.
             if (node.selected) {
-                node.data.$color = "#ff7"
+                node.data.$color = getRandomColor();
             }
             else {
                 delete node.data.$color
@@ -120,7 +127,7 @@ overridable: false,
                     node.eachSubnode(function(n) { count++ })
                     //assign a node color based on
                     //how many children it has
-                    node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count]
+                    node.data.$color = ['#aaa', '#baa', 'get', '#daa', '#eaa', '#faa'][count]
                 }
             }
         },
@@ -132,7 +139,7 @@ overridable: false,
         //override the Edge global style properties.
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
-                adj.data.$color = "#eed"
+                adj.data.$color = getRandomColor();
                 adj.data.$lineWidth = 3
             }
             else {

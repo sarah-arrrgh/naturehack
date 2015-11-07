@@ -1,7 +1,7 @@
 var dataInput = {
     id: "0",
-    name: "INSECTS AND SHIT MOTHERFUCKER",
-    data: {},
+    name: '<img class = "bagels" src= "https://foodimentaryguy.files.wordpress.com/2014/04/sp-pretzel-2-5oz_2_hr.jpg"/>',
+    url: {},
     children: [{
         id: "01",
         name: "01",
