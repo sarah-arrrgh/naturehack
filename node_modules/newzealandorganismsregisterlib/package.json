@@ -1,0 +1,17 @@
+{
+  "name": "newzealandorganismsregisterlib",
+  "version": "1.0.0",
+  "description": "NZOR is an actively maintained compilation of all organism names relevant to New Zealand: indigenous, endemic or exotic species or species not present in New Zealand but of national interest. NZOR is digitally and automatically assembled on a regular basis from a number of taxonomic data providers. It provides a consensus opinion on the preferred name for an organism, any alternative scientific names (synonyms), common and Māori names, relevant literature, and the data provider’s view on the documented presence/absence in New Zealand.
+
+The NZOR information infrastructure is currently hosted by Landcare Research.
+
+The development of the NZOR infrastructure was supported by the Terrestrial and Freshwater Biodiversity Information Systems Programme (TFBIS). ",
+  "main": "./lib/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "APIMATIC SDK Generator",
+  "dependencies": {
+    "request": "^2.55.0",
+    "string": "^3.1.1"
+  }
+}
