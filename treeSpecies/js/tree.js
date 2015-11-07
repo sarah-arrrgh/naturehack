@@ -89,7 +89,7 @@ function init(){
 
         onBeforePlotNode: function(node){
             if (node.selected) {
-                node.data.$color = "#E9980A"
+                node.data.$color = "#ddc029"
                 node.data.$dim = 160
             }
             else {
